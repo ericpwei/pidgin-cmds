@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------
+Pidgin-Cmds 0.1.0
+-------------------------------------------------------------------------------
+  eric wei <ericwei.dev@gmail.com>
+
+DESCRIPTION
+
+  You have 8 active conversation windows open.  You are drinking a delicious 
+  <insert beverage of choice here>.  All of a sudden, you feel the impending
+  tinkle urge.  You ignore it for a few minutes.  The urge grows as sounds of
+  waterfalls are broadcasted on <insert sound medium here>.
+
+  Pidgin-Shout to the rescue.  Instead of having to type "brb" on all of your
+  conversation windows, you type "/shout brb" in one conversation window and
+  the message is broadcasted to all active conversation windows.
+
+  Or, imagine you want to call a buddy out on a dare he never manned up on.
+  He's denying that he ever said anything about it. All you remember was
+  something about drinking raw eggs. Pidgin-Grep to the rescue. All you 
+  have to do is type /grep raw eggs and all conversation lines with "raw eggs"
+  will show up in your conversation window.
+
+  The gist of this package is to provide some lightweight commands for basic
+  conversation commands in pidgin.
+
+REQUIREMENTS
+
+  libpurple-dev
+  libglib2.0-dev
+    
+INSTALL
+
+  ./autogen.sh
+  ./configure
+  make
+  [sudo] make install
+
+LICENSE
+
+  All the cool plugins distributed are distributed under GPL license version 2.
+  See COPYING for legal mumbo jumbo if you really care.
