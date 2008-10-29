@@ -1,23 +1,23 @@
 AAM_CFLAGS = -g -g3 -O2 -Wall -DVERSION=\"$(VERSION)\"
 
-pidgin_cmdsdir = $(PIDGIN_INSTALL)
+purple_cmdsdir = $(PURPLE_INSTALL)
 
-pidgin_cmds_LTLIBRARIES = \
-	pidgin_grep.la    \
-	pidgin_shout.la
+purple_cmds_LTLIBRARIES = \
+	purple_grep.la    \
+	purple_shout.la
 
-pidgin_grep_la_CFLAGS =	$(pidgin_CFLAGS)
-pidgin_grep_la_SOURCES = purple-grep.c
-pidgin_grep_la_LDFLAGS =    \
+purple_grep_la_CFLAGS =	$(purple_CFLAGS)
+purple_grep_la_SOURCES = purple-grep.c
+purple_grep_la_LDFLAGS =    \
 	-module		    \
 	-avoid-version	    \
-	-L$(PIDGIN_INSTALL) \
-	$(pidgin_LIBS)
+	-L$(PURPLE_INSTALL) \
+	$(purple_LIBS)
 
-pidgin_shout_la_CFLAGS = $(pidgin_CFLAGS)
-pidgin_shout_la_SOURCES = purple-shout.c
-pidgin_shout_la_LDFLAGS =   \
+purple_shout_la_CFLAGS = $(purple_CFLAGS)
+purple_shout_la_SOURCES = purple-shout.c
+purple_shout_la_LDFLAGS =   \
 	-module             \
 	-avoid-version	    \
-	-L$(PIDGIN_INSTALL) \
-	$(pidgin_LIBS)	
+	-L$(PURPLE_INSTALL) \
+	$(purple_LIBS)	
