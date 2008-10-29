@@ -1,5 +1,5 @@
 /*
- * pidgin-grep plugin
+ * purple-grep plugin
  *
  * by eric wei
  *
@@ -19,7 +19,7 @@
 
 #include <string.h>
 
-#define GREP_PLUGIN_ID "core-pidgin-grep"
+#define GREP_PLUGIN_ID "core-purple-grep"
 
 static PurpleCmdId grep_plugin_id;
 static const PurpleMessageFlags CONVERSATION_FLAGS = PURPLE_MESSAGE_SEND | PURPLE_MESSAGE_RECV;
@@ -102,7 +102,7 @@ static PurplePluginInfo info =
 	PURPLE_PRIORITY_DEFAULT,                     /**< priority       */
 	
 	GREP_PLUGIN_ID,                              /**< id             */
-	"Pidgin-Grep",                               /**< name           */
+	"Purple-Grep",                               /**< name           */
 	VERSION,                                     /**< version        */
 	/**  summary        */
 	"Enable /grep command",

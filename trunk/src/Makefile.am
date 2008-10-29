@@ -7,7 +7,7 @@ pidgin_cmds_LTLIBRARIES = \
 	pidgin_shout.la
 
 pidgin_grep_la_CFLAGS =	$(pidgin_CFLAGS)
-pidgin_grep_la_SOURCES = pidgin-grep.c
+pidgin_grep_la_SOURCES = purple-grep.c
 pidgin_grep_la_LDFLAGS =    \
 	-module		    \
 	-avoid-version	    \
@@ -15,7 +15,7 @@ pidgin_grep_la_LDFLAGS =    \
 	$(pidgin_LIBS)
 
 pidgin_shout_la_CFLAGS = $(pidgin_CFLAGS)
-pidgin_shout_la_SOURCES = pidgin-shout.c
+pidgin_shout_la_SOURCES = purple-shout.c
 pidgin_shout_la_LDFLAGS =   \
 	-module             \
 	-avoid-version	    \

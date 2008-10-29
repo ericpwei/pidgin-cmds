@@ -1,5 +1,5 @@
 /*
- * pidgin-shout plugin
+ * purple-shout plugin
  *
  * by eric wei
  *
@@ -17,7 +17,7 @@
 /* Bad header dependency : cmds.h must be included after internal.h and plugin.h */
 #include <cmds.h>
 
-#define SHOUT_PLUGIN_ID "core-pidgin-shout"
+#define SHOUT_PLUGIN_ID "core-purple-shout"
 
 static PurpleCmdId shout_plugin_id;
 static PurpleCmdRet shout_command_cb(PurpleConversation *, const char *, char **, char **, void *);
@@ -83,7 +83,7 @@ static PurplePluginInfo info =
 	PURPLE_PRIORITY_DEFAULT,                     /**< priority       */
 	
 	SHOUT_PLUGIN_ID,                             /**< id             */
-	"Pidgin-Shout",                              /**< name           */
+	"Purple-Shout",                              /**< name           */
 	VERSION,                                     /**< version        */
 	/**  summary        */
 	"Enable /shout command",
