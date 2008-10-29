@@ -1,2 +1,5 @@
+version 0.2.0 (2008/10/28)
+	* build changes to build for libpurple instead of pidgin.
+	
 version 0.1.0 (2008/10/26)
 	* initial release, including Pidgin-Grep and Pidgin-Shout cmd plugins
