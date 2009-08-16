@@ -1,0 +1,68 @@
+#
+# Makefile.mingw
+#
+# Description: Makefile for win32 (mingw) version of LibPurple Plugins 
+#
+
+VERSION=0.1.0
+PIDGIN_TREE_TOP := ../../pidgin-2.5.5
+include $(PIDGIN_TREE_TOP)/libpurple/win32/global.mak
+
+.SUFFIXES:
+.SUFFIXES: .c .dll
+
+##
+## Preprocessor definitions
+##
+DEFINES += -DVERSION="\"$(VERSION)\""
+
+##
+## INCLUDE PATHS
+##
+INCLUDE_PATHS +=	\
+			-I$(GTK_TOP)/include \
+			-I$(GTK_TOP)/include/glib-2.0 \
+			-I$(GTK_TOP)/lib/glib-2.0/include \
+			-I$(PIDGIN_TREE_TOP) \
+			-I$(PURPLE_TOP) \
+			-I$(PURPLE_TOP)/win32
+
+LIB_PATHS +=		-L$(GTK_TOP)/lib \
+			-L$(PURPLE_TOP)
+
+##
+## LIBRARIES
+##
+LIBS =	\
+			-lglib-2.0 \
+			-lgobject-2.0 \
+			-lgmodule-2.0 \
+			-lintl \
+			-lws2_32 \
+			-lpurple
+
+##
+## TARGET DEFINITIONS
+##
+.PHONY: all clean plugins install
+
+all: $(PURPLE_DLL).a plugins
+
+install: all $(PURPLE_INSTALL_PLUGINS_DIR)
+	cp -v *.dll $(PURPLE_INSTALL_PLUGINS_DIR)
+
+.c.dll:
+	$(CC) $(CFLAGS) $(DEFINES) $(INCLUDE_PATHS) -o $@.o -c $<
+	$(CC) -shared $@.o $(LIB_PATHS) $(LIBS) $(DLL_LD_FLAGS) -o $@
+
+plugins: \
+		purple-shout.dll \
+		purple-grep.dll
+
+##
+## CLEAN RULES
+##
+clean:
+	rm -vf *.o *.dll
+
+include $(PIDGIN_COMMON_TARGETS)

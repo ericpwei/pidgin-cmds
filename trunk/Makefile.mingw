@@ -1,0 +1,27 @@
+#
+# Makefile.mingw
+#
+# Description: Makefile for win32 (mingw) version of LibPurple
+#
+
+PIDGIN_TREE_TOP := ../pidgin-2.5.5
+include $(PIDGIN_TREE_TOP)/libpurple/win32/global.mak
+
+PIDGIN_CMDS_SRC=src
+
+##
+## TARGET DEFINITIONS
+##
+.PHONY: all install clean
+
+all:
+	$(MAKE) -C $(PIDGIN_CMDS_SRC) -f $(MINGW_MAKEFILE)
+
+install: all
+	$(MAKE) -C $(PIDGIN_CMDS_SRC) -f $(MINGW_MAKEFILE) install
+
+##
+## CLEAN RULES
+##
+clean:
+	$(MAKE) -C $(PIDGIN_CMDS_SRC) -f $(MINGW_MAKEFILE) clean
