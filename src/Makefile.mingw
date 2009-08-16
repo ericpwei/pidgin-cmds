@@ -4,8 +4,7 @@
 # Description: Makefile for win32 (mingw) version of LibPurple Plugins 
 #
 
-VERSION=0.1.0
-PIDGIN_TREE_TOP := ../../pidgin-2.5.5
+PIDGIN_TREE_TOP=$(shell find ../../ -maxdepth 1 -type d -name 'pidgin-[0-9]*' | tail -1)
 include $(PIDGIN_TREE_TOP)/libpurple/win32/global.mak
 
 .SUFFIXES:
