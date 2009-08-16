@@ -1,0 +1,18 @@
+Win32 Installation Instructions
+===============================
+
+Bare-bones Installation instructions for .dll's
+
+1. To install for all-uses for a specific pidgin version, 
+   locate the pidgin plugin installation directory. It's 
+   usually in [Some drive]:\Program\ Files\Pidgin\plugins.
+
+   The caveat to this approach is that re-installations of pidgin
+   will remove plugins copied in this way.
+
+   Alternatively, to install it for specific users and have
+   the plugin installation persist across pidgin installations, locate
+   the .purple directory in Application \Data. For instance,
+   [Some drive]:\Documents\ and Settings\[User]\Application \Data\.purple\plugins.
+
+2. Copy the .dll files to the plugin directory found in (1)

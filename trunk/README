@@ -28,13 +28,6 @@ REQUIREMENTS
   libpurple-dev
   libglib2.0-dev
     
-INSTALL
-
-  ./autogen.sh
-  ./configure
-  make
-  [sudo] make install
-
 LICENSE
 
   All the cool plugins distributed are distributed under GPL license version 2.
